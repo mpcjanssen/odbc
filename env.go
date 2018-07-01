@@ -6,7 +6,7 @@ import (
 )
 
 type DSN struct {
-	Name string
+	Name        string
 	Description string
 }
 
@@ -46,7 +46,7 @@ func DataSources() ([]DSN, error) {
 		if ret != api.SQL_SUCCESS {
 			break
 		}
-		DSNs = append(DSNs, DSN{ string(dsnName[:dsnNameLength]), string(dsnDescription[:dsnDescriptionLength]) } )
+		DSNs = append(DSNs, DSN{string(dsnName[:dsnNameLength]), string(dsnDescription[:dsnDescriptionLength])})
 	}
 	return DSNs, nil
 }
